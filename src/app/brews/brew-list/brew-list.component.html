@@ -1,0 +1,12 @@
+<h3>Brews</h3>
+<div class="list-group mt-3">
+    <a class="list-group-item list-group-item-action" *ngFor="let brew of brews">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex flex-column">
+                <strong class="text-primary">{{brew.name}}</strong>
+                <small class="text-muted">{{brew.tagline}}</small>
+            </div>
+            <span class="badge badge-secondary">{{brew.abv}}%</span>
+        </div>
+    </a>
+</div>
