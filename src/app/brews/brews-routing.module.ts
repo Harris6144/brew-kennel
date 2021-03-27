@@ -6,8 +6,8 @@ import {BrewListComponent} from './brew-list/brew-list.component';
 
 const routes: Routes = [
     {path: 'brews', component: BrewsComponent, children: [
-        {path: '', redirectTo: 'list', pathMatch: 'full'},
-        {path: 'list', component: BrewListComponent}
+        {path: '', redirectTo: 'list/1', pathMatch: 'full'},
+        {path: 'list/:page', component: BrewListComponent}
     ]}
 ];
 

@@ -14,7 +14,7 @@ export class BrewService {
         this.rootEndpoint = 'https://api.punkapi.com/v2/';
     }
 
-    getBrews(): Observable<Brew[]> {
-        return this.httpClient.get<Brew[]>(this.rootEndpoint + 'beers');
+    getBrews(page: number, perPage: number): Observable<Brew[]> {
+        return this.httpClient.get<Brew[]>(this.rootEndpoint + 'beers?page=' + page + '&per_page=' + perPage);
     }
 }
